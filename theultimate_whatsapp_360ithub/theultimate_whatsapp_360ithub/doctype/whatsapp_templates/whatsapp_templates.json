@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "autoname": "format:WA-Template-{###}",
+ "creation": "2024-10-07 14:56:04.444676",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "send_method",
+  "message_type",
+  "template_name",
+  "column_break_bppm",
+  "media_type",
+  "media_id",
+  "media_url",
+  "body"
+ ],
+ "fields": [
+  {
+   "default": "quick",
+   "fieldname": "send_method",
+   "fieldtype": "Data",
+   "label": "Send Method"
+  },
+  {
+   "fieldname": "message_type",
+   "fieldtype": "Select",
+   "label": "Message Type",
+   "options": "\nTEXT\nMEDIA"
+  },
+  {
+   "description": "This template name should not contain spaces or Uppercase.\nExample:-Student PDF Template(wrong)\nstudent_pdf_template(right)",
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "label": "Template Name"
+  },
+  {
+   "depends_on": "eval: doc.message_type == 'MEDIA'",
+   "fieldname": "media_type",
+   "fieldtype": "Select",
+   "label": "Media Type",
+   "options": "\nImage\nDocument"
+  },
+  {
+   "depends_on": "eval: doc.media_type == 'Document' || 'Image'",
+   "description": "Note: Only Public URLs Accepted",
+   "fieldname": "media_url",
+   "fieldtype": "Data",
+   "label": "Media URL"
+  },
+  {
+   "fieldname": "body",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Body"
+  },
+  {
+   "depends_on": "eval: doc.media_type == 'Image'",
+   "fieldname": "media_id",
+   "fieldtype": "Data",
+   "label": "Media ID"
+  },
+  {
+   "fieldname": "column_break_bppm",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-11 11:15:53.927410",
+ "modified_by": "Administrator",
+ "module": "theultimate_whatsapp_360ithub",
+ "name": "WhatsApp Templates",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "template_name"
+}

@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "autoname": "format:WA-Config-{##}",
+ "creation": "2024-10-05 11:11:00.797654",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "waba_number",
+  "wa_server",
+  "output",
+  "column_break_egfk",
+  "api_key",
+  "password",
+  "default",
+  "active"
+ ],
+ "fields": [
+  {
+   "default": "918792765755",
+   "fieldname": "waba_number",
+   "fieldtype": "Data",
+   "label": "WABA Number"
+  },
+  {
+   "default": "885a1a2e9946593fa38dc230b7975c17bff30a7a",
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "default": "visionselfwa",
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "label": "User ID"
+  },
+  {
+   "fieldname": "column_break_egfk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "default": "0",
+   "fieldname": "default",
+   "fieldtype": "Check",
+   "label": "Default"
+  },
+  {
+   "default": "https://theultimate.io/WAApi",
+   "fieldname": "wa_server",
+   "fieldtype": "Data",
+   "label": "WA Server",
+   "read_only": 1
+  },
+  {
+   "fieldname": "output",
+   "fieldtype": "Data",
+   "label": "Output",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-10 12:34:05.919225",
+ "modified_by": "Administrator",
+ "module": "theultimate_whatsapp_360ithub",
+ "name": "WhatsApp Message Configuration",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
